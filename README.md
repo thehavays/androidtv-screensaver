@@ -1,5 +1,15 @@
-# Androidtv Screensaver
+# AndroidTV Screensaver
 
-For adding a new image to the slideshow please add a drawable name to the "app/src/main/res/values/images_array.xml" file.
+##Adding Images
 
-main.py fetches images from added URL. You can add a new URL and own the HTML parse method.
+Add images to **drawable** folder and also add to contents array that located in images_array.xml
+
+
+##Adding Video
+
+Add videos to **raw** folder and also add to contents array that located in images_array.xml
+
+
+###Working Logic
+
+The app will fetch the contents array and shuffle it. After that content will be displayed randomly. Images take 10 seconds to display. Videos will be playing until finished.

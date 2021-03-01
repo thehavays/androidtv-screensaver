@@ -46,7 +46,7 @@ class MainActivity : DreamService() {
         }
 
         contentRunnable = object : Runnable {
-            var contentUpdateInterval = TimeUnit.SECONDS.toMillis(10)
+            var contentUpdateInterval = TimeUnit.MINUTES.toMillis(1)
 
             var index: Int = 0
             var stringArray = resources.getStringArray(R.array.contents).toMutableSet().shuffled()
