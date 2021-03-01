@@ -19,6 +19,8 @@
         android:layout_marginEnd="75dp"
         android:layout_marginBottom="75dp"
         android:gravity="bottom|end"
+        android:shadowColor="#000000"
+        android:shadowRadius="2"
         android:textColor="@color/lb_tv_white"
         android:textSize="50sp" />
 
