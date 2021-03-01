@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <array name="images">
+    <array name="contents">
         <item>rujybepncz.jpg</item>
         <item>bnwnmkoikc.jpg</item>
         <item>hjdsqgnwgd.jpg</item>
@@ -16,5 +16,10 @@
         <item>xdvpvjftnr.jpg</item>
         <item>mdmtskjisv.jpg</item>
         <item>gsoodnspdr.jpg</item>
+        <item>bigger_blazes.mp4</item>
+        <item>bigger_escapes.mp4</item>
+        <item>bigger_fun.mp4</item>
+        <item>bigger_joyrides.mp4</item>
+        <item>bigger_meltdowns.mp4</item>
     </array>
 </resources>
