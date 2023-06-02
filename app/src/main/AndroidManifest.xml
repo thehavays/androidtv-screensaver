@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.havaylab.screensaver"
     tools:ignore="MissingLeanbackLauncher">
 
     <uses-feature
@@ -31,7 +30,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </service>
-
     </application>
 
 </manifest>

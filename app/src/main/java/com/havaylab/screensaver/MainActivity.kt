@@ -1,6 +1,7 @@
 package com.havaylab.screensaver
 
 import android.service.dreams.DreamService
+import android.view.KeyEvent
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
@@ -62,14 +63,13 @@ class MainActivity : DreamService() {
 
                 if (resourceName.endsWith(".jpg")) {
                     val resourceId: Int = resources.getIdentifier(
-                        resourceName.substringBefore("."), "drawable",
+                        resourceName.substringBefore("."),
+                        "drawable",
                         applicationContext.packageName
                     )
                     imageView.setImageDrawable(
                         ResourcesCompat.getDrawable(
-                            resources,
-                            resourceId,
-                            theme
+                            resources, resourceId, theme
                         )
                     )
 
@@ -80,8 +80,7 @@ class MainActivity : DreamService() {
                 } else if (resourceName.endsWith(".mp4")) {
                     videoView.setVideoPath(
                         "android.resource://$packageName/raw/" + resourceName.substring(
-                            0,
-                            resourceName.indexOf(".mp4")
+                            0, resourceName.indexOf(".mp4")
                         )
                     )
                     videoView.requestFocus()
@@ -97,6 +96,16 @@ class MainActivity : DreamService() {
                 }
             }
         }
+    }
+
+    override fun dispatchKeyEvent(event: KeyEvent?): Boolean {
+        if (event != null) {
+            if ((event.keyCode == KeyEvent.KEYCODE_DPAD_LEFT) || (event.keyCode == KeyEvent.KEYCODE_DPAD_RIGHT)) {
+                contentRunnable.run()
+                return false
+            }
+        }
+        return super.dispatchKeyEvent(event)
     }
 
     override fun onDreamingStarted() {
